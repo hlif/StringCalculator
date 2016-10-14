@@ -31,6 +31,7 @@ public class CalculatorTest {
         assertEquals(3+6+15+18+46+33, Calculator.add("3,6,15,18,46,33"));
     }
 
+
     @Test
     public void testNewLines() {
         assertEquals(6, Calculator.add("1\n2,3"));
@@ -45,6 +46,7 @@ public class CalculatorTest {
 			exception = e;
 		}
 	}
+
 
 
 	@Test
