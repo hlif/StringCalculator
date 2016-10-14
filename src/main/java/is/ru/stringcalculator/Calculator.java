@@ -14,7 +14,7 @@ public class Calculator {
 		else
 			return 1;
 	}
-	
+
 
 	private static int toInt(String number){
 		return Integer.parseInt(number);
@@ -26,5 +26,29 @@ public class Calculator {
 		numbers = numbers.replace("\n", ",");
 	}
 	   return numbers.split(",");
+	}
+
+	   
+ private static int sum(String[] numbers){
+		int total = 0;
+		int n = 0; 
+		ArrayList negative = new ArrayList();
+		
+		for(String number : numbers){
+			n = toInt(number);
+			
+			if(n <= 1000){
+				total += n;
+			}
+			if(n < 0){
+				negative.add(n);
+			}
+		}
+
+		if(negative.size() < 0){
+			throw new RuntimeException("Negatives not allowed: " + negative.toString());
+		}
+		
+		return total;
 	}
 }
