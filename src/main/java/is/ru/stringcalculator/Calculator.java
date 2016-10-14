@@ -14,8 +14,17 @@ public class Calculator {
 		else
 			return 1;
 	}
+	
 
 	private static int toInt(String number){
 		return Integer.parseInt(number);
+	}
+
+
+	private static String[] splitNumbers(String numbers){
+	if(numbers.contains("\n")){
+		numbers = numbers.replace("\n", ",");
+	}
+	   return numbers.split(",");
 	}
 }
