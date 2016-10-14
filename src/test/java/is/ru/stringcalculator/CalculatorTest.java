@@ -3,12 +3,19 @@ package is.ru.stringcalculator;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-public class CalculatorTest {
+public class calculatorTest {
 
-	
 	@Test
 	public void testEmptyString() {
-		assertEquals(0, Calculator.add(""));
+		assertEquals(0,Calculator.add(""));
 	}
 
-}
+	@Test 
+	public void testOneNumber() {
+		assertEquals(1,calculator.add("1"));
+	}
+
+	@Test 
+	public void testTwoNumber(){
+		assertEquals(3,calculator.add("1,2"));
+	}
